@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoparque | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#0A1A10] font-Outfit text-white">
+
+    <header class=" sticky top-0 bg-[#1C3A28] flex flex-wrap items-center gap-x-16 gap-y-2 px-4  text-white">
+        <a href="index.html">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav>
+            <ul class="flex flex-wrap gap-x-12 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- TÍTULO -->
+        <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center">Ecoparque</h1>
+        <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Conectá con la naturaleza en el corazón de Palermo</h2>
+
+        <!-- FOTOS + INFORMACIÓN GENERAL -->
+        <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
+
+            <!-- Fotos: una grande y cinco miniaturas -->
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
+                <img id="foto-principal" src="Fotos/ecoparque/Eco1.jpeg" alt="Lago del Parque Centenario con sus fuentes y árboles de fondo" class="w-full h-64 md:h-96 object-cover rounded-2xl">
+
+                <div class="grid grid-cols-5 gap-2 mt-4">
+                    <img src="Fotos/ecoparque/Eco1.jpeg" alt="Vista de entrada y lago" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/ecoparque/Eco7.jpeg" alt="Jirafas" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/ecoparque/Eco9.jpeg" alt="Antiguo recinto del condor" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/ecoparque/Eco8.jpeg" alt="Pavo real" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/ecoparque/Eco6.png" alt="Mapa del parque" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                </div>
+            </div>
+
+            <!-- Información general -->
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
+                <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">Información general</h3>
+                <ul class="space-y-3 ">
+                    <li><b>Ubicación:</b> Av. General Las Heras 4267, Palermo, Ciudad de Buenos Aires.</li>
+                    <li><b>Horario general:</b>martes a domingo, de 11:00 a 18:00, sujeto a cambios.</li>
+                    <li><b>Acceso:</b> gratuito para residentes de CABA.</li>
+                    <li><b>Duración sugerida:</b> 1,5 a 3 horas, según las actividades elegidas.</li>
+                    <li><b>Cómo llegar:</b> subte línea D, estación Plaza Italia, o colectivos por Av. Santa Fe, Av. Sarmiento y Av. Las Heras.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DESCRIPCIÓN -->
+        <section class="max-w-3xl mx-auto text-center text-lg mt-12 ">
+            <p class="mb-4">El Ecoparque de Buenos Aires es un espacio de naturaleza, conservación y educación ambiental ubicado en Palermo. El recorrido propone descubrir la biodiversidad, conocer el trabajo de conservación de fauna y reconocer la historia del predio, que funcionó como Zoológico de Buenos Aires hasta 2016.</p>
+            <p class="mb-4">La experiencia busca transmitir la importancia de proteger especies y también sus ambientes. El visitante conocerá los programas de rescate, rehabilitación y conservación de fauna, y comprenderá la transformación del antiguo zoológico en un espacio con nuevos objetivos ambientales y educativos. También podrá descubrir el patrimonio histórico y arquitectónico que permanece en el predio.
+</p>
+            <p>Recomendamos Usar calzado cómodo y llevar agua y protección solar. Consultar previamente la programación y las condiciones de apertura, especialmente ante mal tiempo. Respetar las indicaciones del personal, no alimentar ni tocar a los animales y mantener una distancia adecuada.</p>
+        </section>
+
+        <!-- ACTIVIDADES -->
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Actividades</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/ecoparque/Eco1.jpeg" alt="Vista de entrada y lago" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Pasear por el parque</h3>
+                    <p class="text-center mt-2">Recorrer los senderos y espacios verdes del Ecoparque.</p>
+                    
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/ecoparque/Eco4.jpg" alt="Maras" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Observar animales</h3>
+                    <p class="text-center mt-2">Conocer especies autóctonas y aprender sobre su conservación.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/ecoparque/Eco5.jpeg" alt="Cabana del Condor" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Actividades educativas</h3>
+                    <p class="text-center mt-2">Conocer los programas de rescate, rehabilitación y conservación de fauna.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/ecoparque/Eco3.jpeg" alt="Recinto de elefantes" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Conocer la historia</h3>
+                    <p class="text-center mt-2">Recorrer los edificios y monumentos históricos del antiguo Zoológico de Buenos Aires.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/ecoparque/Eco2.jpeg" alt="Pabellon de las Fieras" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Espacios patrimoniales</h3>
+                    <p class="text-center mt-2">Conocer espacioss como el Templo de Vesta, la Glorieta y el Pabellón de las Fieras.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA -->
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
+            <iframe
+                src="https://www.google.com/maps?q=-34.5812025,-58.4200454&hl=es&z=17&output=embed"
+                title="Mapa de ubicación del Ecoparque"
+                loading="lazy"
+                class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
+        </section>
+
+        <!-- VOLVER -->
+        <div class="text-center mt-10">
+            <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110">Volver al inicio</a>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
+        <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Al hacer clic en una miniatura, se muestra en la foto grande
+        function cambiarFoto(miniatura) {
+            var fotoGrande = document.getElementById("foto-principal");
+            fotoGrande.src = miniatura.src;
+            fotoGrande.alt = miniatura.alt;
+        }
+    </script>
+</body>
+</html>
