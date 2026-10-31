@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Centenario | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#0A1A10] font-Outfit text-white">
+
+    <!-- ENCABEZADO -->
+    <header class="bg-[#1C3A28] flex flex-wrap items-center gap-x-16 gap-y-2 px-4">
+        <a href="index.html">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav>
+            <ul class="flex flex-wrap gap-x-12 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- TÍTULO -->
+        <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center">Parque Centenario</h1>
+        <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Un jardín histórico en el corazón de Caballito</h2>
+
+        <!-- FOTOS + INFORMACIÓN GENERAL -->
+        <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
+
+            <!-- Fotos: una grande y cinco miniaturas -->
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
+                <img id="foto-principal" src="Fotos/centenario/lago-fuentes-panoramica.jpg" alt="Lago del Parque Centenario con sus fuentes y árboles de fondo" class="w-full h-64 md:h-96 object-cover rounded-2xl">
+
+                <div class="grid grid-cols-5 gap-2 mt-4">
+                    <img src="Fotos/centenario/lago-fuentes-panoramica.jpg" alt="Lago del Parque Centenario con sus fuentes y árboles de fondo" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/centenario/pata-con-patitos.jpg" alt="Una pata blanca con sus patitos en el borde del lago" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/centenario/sendero-adoquines.jpg" alt="Sendero de tierra con bordes de adoquines entre el césped y los árboles" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/centenario/feria-del-parque.jpg" alt="Feria dentro del parque con puestos de techos de colores" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/centenario/juegos-infantiles.jpg" alt="Área de juegos infantiles con hamacas y toboganes de colores" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                </div>
+            </div>
+
+            <!-- Información general -->
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
+                <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">Información general</h3>
+                <ul class="space-y-3">
+                    <li><b>Ubicación:</b> Av. Díaz Vélez 4859, Caballito, Ciudad de Buenos Aires.</li>
+                    <li><b>Horario general:</b> todos los días, en general de 8:00 a 20:00 (puede variar según la época del año).</li>
+                    <li><b>Acceso:</b> gratuito.</li>
+                    <li><b>Duración sugerida:</b> 1 a 2 horas. Más tiempo si se visita el museo.</li>
+                    <li><b>Cómo llegar:</b> subte línea B, estación Ángel Gallardo (unos 10 minutos a pie), o colectivos por Av. Díaz Vélez, Av. Ángel Gallardo y Av. Patricias Argentinas.</li>
+                    <li><b>Accesibilidad:</b> espacio público al aire libre con senderos; algunos tramos tienen adoquines o piso irregular.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DESCRIPCIÓN -->
+        <section class="max-w-3xl mx-auto text-center text-lg mt-12">
+            <p class="mb-4">El Parque Centenario es uno de los principales espacios verdes de la Ciudad de Buenos Aires. Tiene unas 12 hectáreas y fue diseñado por el paisajista francés Carlos Thays para conmemorar el centenario de la Revolución de Mayo. Sus obras terminaron en 1920 y en 2012 fue reconocido como Jardín Histórico de la Ciudad.</p>
+            <p class="mb-4">Su lago central tiene fuentes y una isla donde anidan aves. Dentro del predio también están el Anfiteatro Eva Perón, el Museo Argentino de Ciencias Naturales "Bernardino Rivadavia" (de martes a domingo por la tarde) y el observatorio de la Asociación Amigos de la Astronomía, que hace visitas con telescopios los viernes y sábados al anochecer, con cielo despejado.</p>
+            <p>Recomendamos ir con tiempo, llevar mate, agua y protector solar, y visitarlo un fin de semana para aprovechar las ferias.</p>
+        </section>
+
+        <!-- ACTIVIDADES -->
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Actividades</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/centenario/lago-orilla-fuentes.jpg" alt="Orilla del lago con las fuentes de agua al fondo" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Pasear por el lago</h3>
+                    <p class="text-center mt-2">Caminar alrededor del lago, ver las fuentes y observar las aves de la isla central.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/centenario/sendero-araucaria.jpg" alt="Gran araucaria junto a un sendero curvo del parque" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Recorrer los senderos</h3>
+                    <p class="text-center mt-2">Caminar entre árboles y espacios verdes, o sentarse en el pasto a tomar mate.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/centenario/feria-sobre-la-calle.jpg" alt="Feria junto al parque con puestos de ropa y accesorios" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Recorrer las ferias</h3>
+                    <p class="text-center mt-2">Feria de artesanos y de libros usados. La de artesanos funciona los fines de semana y feriados de 10 a 20 h.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/centenario/carrusel.jpg" alt="Carrusel con un cerco pintado de colores" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Juegos para chicos</h3>
+                    <p class="text-center mt-2">Áreas de juegos infantiles y un carrusel, ideales para ir en familia.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/centenario/postas-de-ejercicio.jpg" alt="Posta de ejercicios al aire libre con césped al fondo" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Hacer deporte</h3>
+                    <p class="text-center mt-2">Correr por el perímetro, usar las postas de ejercicio y el skate park.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA -->
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
+            <iframe
+                src="https://www.google.com/maps?q=Parque+Centenario,+Caballito,+Buenos+Aires&hl=es&output=embed"
+                title="Mapa de ubicación del Parque Centenario"
+                loading="lazy"
+                class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
+        </section>
+
+        <!-- VOLVER -->
+        <div class="text-center mt-10">
+            <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110">Volver al inicio</a>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
+        <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Al hacer clic en una miniatura, se muestra en la foto grande
+        function cambiarFoto(miniatura) {
+            var fotoGrande = document.getElementById("foto-principal");
+            fotoGrande.src = miniatura.src;
+            fotoGrande.alt = miniatura.alt;
+        }
+    </script>
+</body>
+</html>
