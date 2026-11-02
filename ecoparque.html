@@ -8,20 +8,26 @@
 </head>
 <body class="bg-[#0A1A10] font-Outfit text-white">
 
-    <header class="sticky top-0 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
-        <a href="index.html">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
             <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
         </a>
-        <nav class="mx-auto">
-            <ul class="flex flex-wrap gap-x-12 gap-y-2 font-bold">
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
                 <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
                 <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
                 <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
+                <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 py-8">
+    <main id="contenido" class="max-w-6xl mx-auto px-4 py-8">
         <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform"> ← Volver al inicio </a>
 
         <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center">Ecoparque</h1>

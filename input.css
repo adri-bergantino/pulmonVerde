@@ -1,11 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@300..800&display=swap');
+
 @import "tailwindcss";
 
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
-
-
-
-@theme{
+@theme {
     --font-Fraunces: "Fraunces", serif;
     --font-Outfit: "Outfit", sans-serif;
+}
+
+/* Indicador de foco visible y consistente en todo el sitio (accesibilidad 4.2) */
+@layer base {
+    :focus-visible {
+        outline: 3px solid #6CC74E;
+        outline-offset: 3px;
+        border-radius: 0.25rem;
+    }
+}
+
+/* Componentes de formulario (Design System): se reutilizan en contacto y reserva */
+@layer components {
+    .campo {
+        @apply w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/60 aria-invalid:border-[#FF9E96] disabled:opacity-60;
+    }
+
+    .campo-etiqueta {
+        @apply block font-bold mb-2;
+    }
+
+    .campo-ayuda {
+        @apply text-sm text-white/80 mt-2;
+    }
+
+    /* Mensaje de error: ícono + texto, no solo color */
+    .campo-error {
+        @apply mt-2 flex gap-2 text-sm font-bold text-[#FF9E96];
+    }
+
+    .grupo-campos {
+        @apply border-2 border-[#5A8A6A] rounded-2xl p-5 data-[invalid=true]:border-[#FF9E96];
+    }
+
+    .grupo-titulo {
+        @apply font-Fraunces font-bold text-xl px-2;
+    }
+
+    .boton-primario {
+        @apply inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl transition-transform hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100;
+    }
+
+    .boton-secundario {
+        @apply inline-block border-2 border-[#6CC74E] text-white font-bold text-lg px-6 py-3 rounded-2xl transition-transform hover:scale-[1.02];
+    }
+}
+
+/* Marcadores numerados del mapa (Leaflet divIcon) */
+@layer components {
+    .marcador-mapa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 9999px;
+        background-color: #C4790A;
+        color: #000;
+        font-family: "Outfit", sans-serif;
+        font-weight: 700;
+        font-size: 1.125rem;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 6px rgb(0 0 0 / 0.5);
+    }
+
+    .marcador-mapa--activo {
+        background-color: #6CC74E;
+        transform: scale(1.2);
+    }
 }

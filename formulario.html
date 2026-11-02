@@ -3,106 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva tu visita | Pulmón Verde</title>
+    <title>Reservá tu experiencia | Pulmón Verde</title>
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="min-h-screen bg-[#0A1A10] font-Outfit text-white flex flex-col">
 
-    <header class="sticky top-0 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
-        <a href="index.html">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
             <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
         </a>
-        <nav class="mx-auto">
-            <ul class="flex flex-wrap gap-x-12 gap-y-2 font-bold">
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
                 <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
                 <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
                 <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" aria-current="page" class="text-[#6CC74E] underline underline-offset-4">Reservar</a></li>
+                <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="flex-1 w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
-        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform">
-            ← Volver al inicio
-        </a>
+    <main id="contenido" class="flex-1 w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
+        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform">← Volver al inicio</a>
 
-        <section class="grid gap-y-12 mt-10 max-w-3xl mx-auto">
+        <section class="grid gap-y-8 mt-10 max-w-3xl mx-auto">
             <div>
-                <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl sm:text-5xl leading-tight">
-                    Reserva tu visita
-                </h1>
-                <p class="text-lg sm:text-xl mt-5 leading-relaxed">
-                    Organizá tu próximo paseo y preparate para disfrutar de los espacios verdes de Buenos Aires.
-                    Completá tus datos para registrar tu solicitud de visita.
-                </p>
-
-                
+                <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl sm:text-5xl leading-tight">Reservá tu experiencia</h1>
+                <p class="text-lg sm:text-xl mt-5 leading-relaxed">Los parques son de acceso libre, pero podés sumar una experiencia con anticipación. Elegí el parque, la experiencia y la cantidad: calculamos el total en dólares y en pesos.</p>
             </div>
 
-            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
-                <h2 class="font-Fraunces font-bold text-white text-2xl sm:text-3xl mb-2">Completá tus datos</h2>
-                <p class="text-white/80 mb-6">Todos los campos son obligatorios.</p>
+            <!-- Aviso permanente -->
+            <p class="flex gap-3 rounded-xl border-2 border-[#C4790A] bg-[#1C3A28] p-4">
+                <span aria-hidden="true">ℹ</span>
+                <span><strong>Reserva de demostración.</strong> Este sitio es un trabajo académico: no se procesan pagos, no se piden datos bancarios y los precios son de ejemplo.</span>
+            </p>
 
-                <form id="formulario-reserva" class="space-y-5">
-                    <div>
-                        <label for="nombre" class="block font-bold mb-2">Nombre</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            autocomplete="given-name"
-                            required
-                            placeholder="Ingresá tu nombre"
-                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
-                    </div>
+            <!-- PASO 1: FORMULARIO -->
+            <div id="reserva-paso-formulario" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
+                <h2 id="reserva-titulo-formulario" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl mb-2">Armá tu reserva</h2>
+                <p class="text-white/80 mb-6">Todos los campos son obligatorios, salvo los adicionales.</p>
 
-                    <div>
-                        <label for="apellido" class="block font-bold mb-2">Apellido</label>
-                        <input
-                            type="text"
-                            id="apellido"
-                            name="apellido"
-                            autocomplete="family-name"
-                            required
-                            placeholder="Ingresá tu apellido"
-                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
-                    </div>
+                <div id="reserva-resumen-errores" role="alert" hidden class="mb-6 rounded-xl border-2 border-[#FF9E96] bg-[#1C3A28] p-4"></div>
 
-                    <div>
-                        <label for="email" class="block font-bold mb-2">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            autocomplete="email"
-                            required
-                            placeholder="ejemplo@correo.com"
-                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
-                    </div>
+                <form id="formulario-reserva" novalidate class="space-y-8">
 
-                    <div>
-                        <label for="personas" class="block font-bold mb-2">Cantidad de personas</label>
-                        <input
-                            type="number"
-                            id="personas"
-                            name="personas"
-                            min="1"
-                            step="1"
-                            required
-                            placeholder="Ej.: 3"
-                            inputmode="numeric"
-                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
-                        <p class="text-sm text-white/70 mt-2">Ingresá al menos 1 persona.</p>
-                    </div>
+                    <!-- Tus datos -->
+                    <fieldset class="grupo-campos">
+                        <legend class="grupo-titulo">Tus datos</legend>
+                        <div class="space-y-5 mt-2">
+                            <div>
+                                <label for="nombre" class="campo-etiqueta">Nombre y apellido</label>
+                                <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="80" required
+                                       aria-describedby="nombre-error" placeholder="Ej.: Ana Pérez" class="campo">
+                                <p id="nombre-error" class="campo-error" hidden></p>
+                            </div>
+                            <div>
+                                <label for="email" class="campo-etiqueta">Correo electrónico</label>
+                                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required
+                                       aria-describedby="email-error" placeholder="ejemplo@correo.com" class="campo">
+                                <p id="email-error" class="campo-error" hidden></p>
+                            </div>
+                            <div>
+                                <label for="fecha" class="campo-etiqueta">Fecha de la visita</label>
+                                <input type="date" id="fecha" name="fecha" required
+                                       aria-describedby="fecha-ayuda fecha-error" class="campo">
+                                <p id="fecha-ayuda" class="campo-ayuda">Elegí una fecha desde mañana. Consultá los horarios del parque en su página.</p>
+                                <p id="fecha-error" class="campo-error" hidden></p>
+                            </div>
+                        </div>
+                    </fieldset>
 
-                    <button
-                        type="submit"
-                        class="w-full bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:bg-[#D99120] hover:scale-[1.02] transition-transform focus:outline-none focus:ring-2 ">
-                        Enviar reserva
-                    </button>
+                    <!-- Tu experiencia -->
+                    <fieldset class="grupo-campos">
+                        <legend class="grupo-titulo">Tu experiencia</legend>
+                        <div class="space-y-6 mt-2">
 
-                    <p id="mensaje" role="status" aria-live="polite" class="hidden rounded-xl border border-[#6CC74E] bg-[#1C3A28] p-4 text-center"></p>
+                            <div>
+                                <label for="parque" class="campo-etiqueta">Parque</label>
+                                <select id="parque" name="parque" required aria-describedby="parque-error" class="campo">
+                                    <option value="">Elegí un parque</option>
+                                    <option value="Ecoparque (Palermo)">Ecoparque (Palermo)</option>
+                                    <option value="Parque Centenario (Caballito)">Parque Centenario (Caballito)</option>
+                                    <option value="Parque Thays / Plaza Francia (Recoleta)">Parque Thays / Plaza Francia (Recoleta)</option>
+                                    <option value="Parque Barrancas (Belgrano)">Parque Barrancas (Belgrano)</option>
+                                </select>
+                                <p id="parque-error" class="campo-error" hidden></p>
+                            </div>
+
+                            <!-- Fuente de datos de precios: atributos data-* (js/reserva.js los lee) -->
+                            <fieldset id="experiencia" aria-describedby="experiencia-error" class="grupo-campos">
+                                <legend class="grupo-titulo">Experiencia</legend>
+                                <div class="grid gap-4 md:grid-cols-3 mt-2">
+                                    <label class="flex gap-3 rounded-xl border-2 border-[#5A8A6A] p-4 cursor-pointer has-checked:border-[#6CC74E] has-checked:bg-[#1C3A28]">
+                                        <input type="radio" name="experiencia" value="visita-guiada" data-nombre="Visita guiada" data-precio="12" data-unidad="persona" class="mt-1 h-5 w-5 shrink-0 accent-[#6CC74E]">
+                                        <span>
+                                            <strong class="block">Visita guiada</strong>
+                                            <span class="block text-white/80 text-sm">Recorrido con guía por los puntos principales del parque.</span>
+                                            <span class="block font-bold mt-2">US$ 12 por persona</span>
+                                        </span>
+                                    </label>
+                                    <label class="flex gap-3 rounded-xl border-2 border-[#5A8A6A] p-4 cursor-pointer has-checked:border-[#6CC74E] has-checked:bg-[#1C3A28]">
+                                        <input type="radio" name="experiencia" value="taller" data-nombre="Taller de naturaleza" data-precio="15" data-unidad="persona" class="mt-1 h-5 w-5 shrink-0 accent-[#6CC74E]">
+                                        <span>
+                                            <strong class="block">Taller de naturaleza</strong>
+                                            <span class="block text-white/80 text-sm">Actividad educativa sobre la flora y la fauna de la ciudad.</span>
+                                            <span class="block font-bold mt-2">US$ 15 por persona</span>
+                                        </span>
+                                    </label>
+                                    <label class="flex gap-3 rounded-xl border-2 border-[#5A8A6A] p-4 cursor-pointer has-checked:border-[#6CC74E] has-checked:bg-[#1C3A28]">
+                                        <input type="radio" name="experiencia" value="picnic" data-nombre="Kit de picnic" data-precio="25" data-unidad="kit" class="mt-1 h-5 w-5 shrink-0 accent-[#6CC74E]">
+                                        <span>
+                                            <strong class="block">Kit de picnic</strong>
+                                            <span class="block text-white/80 text-sm">Kit para una tarde al aire libre, pensado para hasta 4 personas.</span>
+                                            <span class="block font-bold mt-2">US$ 25 por kit</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <p id="experiencia-error" class="campo-error" hidden></p>
+                            </fieldset>
+
+                            <div>
+                                <label for="cantidad" id="cantidad-etiqueta" class="campo-etiqueta">Cantidad de personas</label>
+                                <input type="number" id="cantidad" name="cantidad" min="1" max="20" step="1" inputmode="numeric" required
+                                       aria-describedby="cantidad-ayuda cantidad-error" placeholder="Ej.: 3" class="campo">
+                                <p id="cantidad-ayuda" class="campo-ayuda">Entre 1 y 20 por reserva.</p>
+                                <p id="cantidad-error" class="campo-error" hidden></p>
+                            </div>
+
+                            <fieldset class="grupo-campos">
+                                <legend class="grupo-titulo">Adicionales (opcional)</legend>
+                                <div class="space-y-4 mt-2">
+                                    <div>
+                                        <label class="flex gap-3 cursor-pointer has-disabled:opacity-60 has-disabled:cursor-not-allowed">
+                                            <input type="checkbox" id="adicional-ingles" name="adicional" value="guia-ingles" data-nombre="Guía en inglés" data-precio="10" data-tipo="reserva" data-solo="visita-guiada taller"
+                                                   aria-describedby="adicional-ingles-ayuda" class="mt-1 h-5 w-5 shrink-0 accent-[#6CC74E]">
+                                            <span>
+                                                <strong class="block">Guía en inglés</strong>
+                                                <span class="block font-bold">+ US$ 10 por reserva</span>
+                                            </span>
+                                        </label>
+                                        <p id="adicional-ingles-ayuda" data-original="Disponible para la visita guiada y el taller." class="campo-ayuda ml-8">Disponible para la visita guiada y el taller.</p>
+                                    </div>
+                                    <div>
+                                        <label class="flex gap-3 cursor-pointer has-disabled:opacity-60 has-disabled:cursor-not-allowed">
+                                            <input type="checkbox" id="adicional-bolsa" name="adicional" value="bolsa" data-nombre="Bolsa de tela ecológica" data-precio="4" data-tipo="unidad"
+                                                   aria-describedby="adicional-bolsa-ayuda" class="mt-1 h-5 w-5 shrink-0 accent-[#6CC74E]">
+                                            <span>
+                                                <strong class="block">Bolsa de tela ecológica</strong>
+                                                <span class="block font-bold">+ US$ 4 por cada persona o kit</span>
+                                            </span>
+                                        </label>
+                                        <p id="adicional-bolsa-ayuda" data-original="Se suma una bolsa por cada persona o kit." class="campo-ayuda ml-8">Se suma una bolsa por cada persona o kit.</p>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+
+                    <!-- Total en vivo -->
+                    <section aria-labelledby="titulo-total" class="rounded-2xl border-2 border-[#6CC74E] bg-[#1C3A28] p-5">
+                        <h3 id="titulo-total" class="font-Fraunces font-bold text-xl">Tu total</h3>
+                        <p id="total-vacio" class="mt-3">Elegí una experiencia e ingresá la cantidad para ver el total.</p>
+                        <ul id="total-lineas" hidden class="mt-3 space-y-1"></ul>
+                        <p class="mt-4 flex flex-wrap justify-between gap-x-4 font-bold"><span>Total en dólares (USD)</span><span id="total-usd">—</span></p>
+                        <p class="mt-1 flex flex-wrap justify-between gap-x-4 text-2xl font-bold text-[#6CC74E]"><span>Total estimado en pesos (ARS)</span><span id="total-ars">—</span></p>
+                        <p id="cotizacion-info" aria-busy="true" class="campo-ayuda mt-4">Consultando la cotización del dólar…</p>
+                        <button type="button" id="cotizacion-reintentar" hidden class="boton-secundario mt-3 text-base px-4 py-2">Reintentar cotización</button>
+                        <p id="total-anuncio" role="status" class="sr-only"></p>
+                    </section>
+
+                    <button type="submit" class="boton-primario w-full">Revisar reserva</button>
                 </form>
+            </div>
+
+            <!-- PASO 2: RESUMEN ANTES DE CONFIRMAR -->
+            <div id="reserva-paso-resumen" hidden class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
+                <h2 id="reserva-titulo-resumen" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl">Revisá tu reserva</h2>
+                <p class="text-white/80 mt-2">Todavía no está confirmada. Si algo no es correcto, volvé a editar.</p>
+
+                <dl id="resumen-datos" class="mt-6 grid gap-3 sm:grid-cols-2"></dl>
+
+                <div class="mt-6 overflow-x-auto">
+                    <table class="w-full text-left">
+                        <caption class="sr-only">Detalle de la reserva y precios en dólares</caption>
+                        <thead>
+                            <tr class="border-b-2 border-[#5A8A6A]">
+                                <th scope="col" class="py-2 pr-4">Concepto</th>
+                                <th scope="col" class="py-2 pr-4 text-right">Cantidad</th>
+                                <th scope="col" class="py-2 pr-4 text-right">Precio unitario</th>
+                                <th scope="col" class="py-2 text-right">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resumen-lineas"></tbody>
+                    </table>
+                </div>
+
+                <p class="mt-4 flex flex-wrap justify-between gap-x-4 font-bold"><span>Total en dólares (USD)</span><span id="resumen-total-usd"></span></p>
+                <p class="mt-1 flex flex-wrap justify-between gap-x-4 text-2xl font-bold text-[#6CC74E]"><span>Total estimado en pesos (ARS)</span><span id="resumen-total-ars"></span></p>
+                <p id="resumen-cotizacion" class="campo-ayuda mt-4"></p>
+
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <button type="button" id="reserva-confirmar" class="boton-primario">Confirmar reserva</button>
+                    <button type="button" id="reserva-editar" class="boton-secundario">Volver a editar</button>
+                </div>
+            </div>
+
+            <!-- PASO 3: CONFIRMACIÓN -->
+            <div id="reserva-paso-confirmacion" hidden class="bg-[#0F2118] border-2 border-[#6CC74E] rounded-2xl p-5 sm:p-8">
+                <h2 id="reserva-titulo-confirmacion" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl">✔ Reserva registrada (simulación)</h2>
+                <p id="confirmacion-texto" class="mt-4 text-lg"></p>
+                <p class="mt-4 rounded-xl border-2 border-[#C4790A] bg-[#1C3A28] p-4"><strong>Esto es una simulación:</strong> no se cobró nada, no se envió ningún correo y no hay una reserva real en el parque.</p>
+                <dl id="confirmacion-datos" class="mt-6 grid gap-3 sm:grid-cols-2"></dl>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <button type="button" id="reserva-otra" class="boton-secundario">Hacer otra reserva</button>
+                    <a href="index.html" class="boton-primario">Volver al inicio</a>
+                </div>
             </div>
         </section>
     </main>
@@ -111,45 +230,7 @@
         <p>&copy; 2026 Pulmón Verde. Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        const formulario = document.getElementById("formulario-reserva");
-        const campoPersonas = document.getElementById("personas");
-        const mensaje = document.getElementById("mensaje");
-
-        campoPersonas.addEventListener("input", () => {
-            campoPersonas.setCustomValidity("");
-
-            if (campoPersonas.value !== "") {
-                const cantidad = Number(campoPersonas.value);
-
-                if (!Number.isInteger(cantidad) || cantidad < 1) {
-                    campoPersonas.setCustomValidity("Ingresá un número entero de al menos 1 persona.");
-                }
-            }
-        });
-
-        formulario.addEventListener("submit", (evento) => {
-            evento.preventDefault();
-
-            if (!formulario.checkValidity()) {
-                formulario.reportValidity();
-                return;
-            }
-
-            const nombre = document.getElementById("nombre").value.trim();
-            const apellido = document.getElementById("apellido").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const personas = Number(campoPersonas.value);
-
-            if (!nombre || !apellido || !email || !Number.isInteger(personas) || personas < 1) {
-                mensaje.textContent = "Revisá los datos: todos los campos son obligatorios y la cantidad debe ser un entero mayor que cero.";
-                mensaje.classList.remove("hidden");
-                return;
-            }
-
-            mensaje.textContent = `¡Gracias, ${nombre}! Tu solicitud de visita para ${personas} ${personas === 1 ? "persona" : "personas"} fue validada correctamente. Recibirás un correo de confirmación en ${email}.`;
-            mensaje.classList.remove("hidden");
-        });
-    </script>
+    <script src="js/validacion.js"></script>
+    <script src="js/reserva.js"></script>
 </body>
 </html>

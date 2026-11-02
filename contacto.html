@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="min-h-screen bg-[#0A1A10] font-Outfit text-white flex flex-col">
+
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
+                <li><a href="contacto.html" aria-current="page" class="text-[#6CC74E] underline underline-offset-4">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="flex-1 w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
+        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform">← Volver al inicio</a>
+
+        <section class="grid gap-y-8 mt-10 max-w-3xl mx-auto">
+            <div>
+                <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl sm:text-5xl leading-tight">Contacto</h1>
+                <p class="text-lg sm:text-xl mt-5 leading-relaxed">¿Tenés una duda sobre algún parque, una experiencia o una reserva? Escribinos y completá el formulario.</p>
+            </div>
+
+            <!-- Aviso permanente: prevención de errores y transparencia -->
+            <p class="flex gap-3 rounded-xl border-2 border-[#C4790A] bg-[#1C3A28] p-4">
+                <span aria-hidden="true">ℹ</span>
+                <span><strong>Formulario de demostración.</strong> Este sitio es un trabajo académico: tu mensaje se valida pero no se envía a ningún correo.</span>
+            </p>
+
+            <!-- FORMULARIO -->
+            <div id="contacto-formulario" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
+                <h2 class="font-Fraunces font-bold text-white text-2xl sm:text-3xl mb-2">Escribinos</h2>
+                <p class="text-white/80 mb-6">Todos los campos son obligatorios.</p>
+
+                <div id="contacto-resumen-errores" role="alert" hidden class="mb-6 rounded-xl border-2 border-[#FF9E96] bg-[#1C3A28] p-4"></div>
+
+                <form id="formulario-contacto" novalidate class="space-y-5">
+                    <div>
+                        <label for="nombre" class="campo-etiqueta">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="60" required
+                               aria-describedby="nombre-ayuda nombre-error" placeholder="Ej.: Ana Pérez" class="campo">
+                        <p id="nombre-ayuda" class="campo-ayuda">Como querés que te llamemos.</p>
+                        <p id="nombre-error" class="campo-error" hidden></p>
+                    </div>
+
+                    <div>
+                        <label for="email" class="campo-etiqueta">Correo electrónico</label>
+                        <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required
+                               aria-describedby="email-ayuda email-error" placeholder="ejemplo@correo.com" class="campo">
+                        <p id="email-ayuda" class="campo-ayuda">Solo lo usaríamos para responderte.</p>
+                        <p id="email-error" class="campo-error" hidden></p>
+                    </div>
+
+                    <div>
+                        <label for="motivo" class="campo-etiqueta">Motivo de la consulta</label>
+                        <select id="motivo" name="motivo" required aria-describedby="motivo-error" class="campo">
+                            <option value="">Elegí una opción</option>
+                            <option value="Información sobre un parque">Información sobre un parque</option>
+                            <option value="Reservas y experiencias">Reservas y experiencias</option>
+                            <option value="Sugerencia o comentario">Sugerencia o comentario</option>
+                            <option value="Problema con el sitio">Problema con el sitio</option>
+                            <option value="Otro motivo">Otro motivo</option>
+                        </select>
+                        <p id="motivo-error" class="campo-error" hidden></p>
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="campo-etiqueta">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" required
+                                  aria-describedby="mensaje-ayuda mensaje-error" placeholder="Contanos en qué podemos ayudarte" class="campo"></textarea>
+                        <p id="mensaje-ayuda" class="campo-ayuda">Mínimo 10 caracteres. <span id="mensaje-contador">0</span>/500</p>
+                        <p id="mensaje-error" class="campo-error" hidden></p>
+                    </div>
+
+                    <button type="submit" id="contacto-enviar" class="boton-primario w-full">Enviar consulta</button>
+                </form>
+            </div>
+
+            <!-- CONFIRMACIÓN (se muestra después de enviar) -->
+            <div id="contacto-confirmacion" hidden class="bg-[#0F2118] border-2 border-[#6CC74E] rounded-2xl p-5 sm:p-8">
+                <h2 id="contacto-confirmacion-titulo" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl">✔ Consulta recibida (simulación)</h2>
+                <p id="contacto-confirmacion-texto" class="mt-4 text-lg"></p>
+                <p class="mt-4 rounded-xl border-2 border-[#C4790A] bg-[#1C3A28] p-4"><strong>Esto es una simulación:</strong> no se envió ningún correo ni mensaje y nadie va a responderte.</p>
+                <dl id="contacto-confirmacion-datos" class="mt-6 grid gap-3"></dl>
+                <div class="flex flex-wrap gap-4 mt-8">
+                    <button type="button" id="contacto-otra" class="boton-secundario">Enviar otra consulta</button>
+                    <a href="index.html" class="boton-primario">Volver al inicio</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm">
+        <p>&copy; 2026 Pulmón Verde. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/validacion.js"></script>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
