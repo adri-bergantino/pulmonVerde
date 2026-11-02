@@ -24,14 +24,11 @@
     <main class="max-w-6xl mx-auto px-4 py-8">
         <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform"> ← Volver al inicio </a>
 
-        <!-- TÍTULO -->
         <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center">Ecoparque</h1>
         <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Conectá con la naturaleza en el corazón de Palermo</h2>
 
-        <!-- FOTOS + INFORMACIÓN GENERAL -->
         <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
 
-            <!-- Fotos: una grande y cinco miniaturas -->
             <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
                 <img id="foto-principal" src="Fotos/ecoparque/Eco1.jpeg" alt="Lago del Parque Centenario con sus fuentes y árboles de fondo" class="w-full h-64 md:h-96 object-cover rounded-2xl">
 
@@ -44,7 +41,6 @@
                 </div>
             </div>
 
-            <!-- Información general -->
             <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
                 <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">Información general</h3>
                 <ul class="space-y-3 ">
@@ -57,7 +53,6 @@
             </div>
         </section>
 
-        <!-- DESCRIPCIÓN -->
         <section class="max-w-3xl mx-auto text-center text-lg mt-12 ">
             <p class="mb-4">El Ecoparque de Buenos Aires es un espacio de naturaleza, conservación y educación ambiental ubicado en Palermo. El recorrido propone descubrir la biodiversidad, conocer el trabajo de conservación de fauna y reconocer la historia del predio, que funcionó como Zoológico de Buenos Aires hasta 2016.</p>
             <p class="mb-4">La experiencia busca transmitir la importancia de proteger especies y también sus ambientes. El visitante conocerá los programas de rescate, rehabilitación y conservación de fauna, y comprenderá la transformación del antiguo zoológico en un espacio con nuevos objetivos ambientales y educativos. También podrá descubrir el patrimonio histórico y arquitectónico que permanece en el predio.
@@ -65,7 +60,6 @@
             <p>Recomendamos Usar calzado cómodo y llevar agua y protección solar. Consultar previamente la programación y las condiciones de apertura, especialmente ante mal tiempo. Respetar las indicaciones del personal, no alimentar ni tocar a los animales y mantener una distancia adecuada.</p>
         </section>
 
-        <!-- ACTIVIDADES -->
         <section class="mt-12">
             <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Actividades</h2>
             <div class="flex flex-wrap justify-center gap-6">
@@ -103,7 +97,6 @@
             </div>
         </section>
 
-        <!-- MAPA -->
         <section class="mt-12">
             <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
             <iframe
@@ -113,19 +106,16 @@
                 class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
         </section>
 
-        <!-- VOLVER -->
         <div class="text-center mt-10">
             <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110">← Volver al inicio</a>
         </div>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
         <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
     </footer>
 
     <script>
-        // Al hacer clic en una miniatura, se muestra en la foto grande
         function cambiarFoto(miniatura) {
             var fotoGrande = document.getElementById("foto-principal");
             fotoGrande.src = miniatura.src;

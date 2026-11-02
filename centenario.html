@@ -25,14 +25,12 @@
 
         <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform"> ← Volver al inicio </a>
 
-        <!-- TÍTULO -->
         <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center">Parque Centenario</h1>
         <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Un jardín histórico en el corazón de Caballito</h2>
 
-        <!-- FOTOS + INFORMACIÓN GENERAL -->
+
         <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
 
-            <!-- Fotos: una grande y cinco miniaturas -->
             <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
                 <img id="foto-principal" src="Fotos/centenario/lago-fuentes-panoramica.jpg" alt="Lago del Parque Centenario con sus fuentes y árboles de fondo" class="w-full h-64 md:h-96 object-cover rounded-2xl">
 
@@ -45,7 +43,6 @@
                 </div>
             </div>
 
-            <!-- Información general -->
             <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
                 <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">Información general</h3>
                 <ul class="space-y-3">
@@ -59,14 +56,12 @@
             </div>
         </section>
 
-        <!-- DESCRIPCIÓN -->
         <section class="max-w-3xl mx-auto text-center text-lg mt-12">
             <p class="mb-4">El Parque Centenario es uno de los principales espacios verdes de la Ciudad de Buenos Aires. Tiene unas 12 hectáreas y fue diseñado por el paisajista francés Carlos Thays para conmemorar el centenario de la Revolución de Mayo. Sus obras terminaron en 1920 y en 2012 fue reconocido como Jardín Histórico de la Ciudad.</p>
             <p class="mb-4">Su lago central tiene fuentes y una isla donde anidan aves. Dentro del predio también están el Anfiteatro Eva Perón, el Museo Argentino de Ciencias Naturales "Bernardino Rivadavia" (de martes a domingo por la tarde) y el observatorio de la Asociación Amigos de la Astronomía, que hace visitas con telescopios los viernes y sábados al anochecer, con cielo despejado.</p>
             <p>Recomendamos ir con tiempo, llevar mate, agua y protector solar, y visitarlo un fin de semana para aprovechar las ferias.</p>
         </section>
 
-        <!-- ACTIVIDADES -->
         <section class="mt-12">
             <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Actividades</h2>
             <div class="flex flex-wrap justify-center gap-6">
@@ -103,7 +98,6 @@
             </div>
         </section>
 
-        <!-- MAPA -->
         <section class="mt-12">
             <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
             <iframe
@@ -113,19 +107,17 @@
                 class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
         </section>
 
-        <!-- VOLVER -->
         <div class="text-center mt-10">
             <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110"> ← Volver al inicio</a>
         </div>
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
         <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
     </footer>
 
     <script>
-        // Al hacer clic en una miniatura, se muestra en la foto grande
+
         function cambiarFoto(miniatura) {
             var fotoGrande = document.getElementById("foto-principal");
             fotoGrande.src = miniatura.src;

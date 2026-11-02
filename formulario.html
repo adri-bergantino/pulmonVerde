@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu visita | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="min-h-screen bg-[#0A1A10] font-Outfit text-white flex flex-col">
+
+    <header class="sticky top-0 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav class="mx-auto">
+            <ul class="flex flex-wrap gap-x-12 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-1 w-full max-w-6xl mx-auto px-4 py-8 md:py-12">
+        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform">
+            ← Volver al inicio
+        </a>
+
+        <section class="grid gap-y-12 mt-10 max-w-3xl mx-auto">
+            <div>
+                <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl sm:text-5xl leading-tight">
+                    Reserva tu visita
+                </h1>
+                <p class="text-lg sm:text-xl mt-5 leading-relaxed">
+                    Organizá tu próximo paseo y preparate para disfrutar de los espacios verdes de Buenos Aires.
+                    Completá tus datos para registrar tu solicitud de visita.
+                </p>
+
+                
+            </div>
+
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
+                <h2 class="font-Fraunces font-bold text-white text-2xl sm:text-3xl mb-2">Completá tus datos</h2>
+                <p class="text-white/80 mb-6">Todos los campos son obligatorios.</p>
+
+                <form id="formulario-reserva" class="space-y-5">
+                    <div>
+                        <label for="nombre" class="block font-bold mb-2">Nombre</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            autocomplete="given-name"
+                            required
+                            placeholder="Ingresá tu nombre"
+                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
+                    </div>
+
+                    <div>
+                        <label for="apellido" class="block font-bold mb-2">Apellido</label>
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            autocomplete="family-name"
+                            required
+                            placeholder="Ingresá tu apellido"
+                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-bold mb-2">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            required
+                            placeholder="ejemplo@correo.com"
+                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
+                    </div>
+
+                    <div>
+                        <label for="personas" class="block font-bold mb-2">Cantidad de personas</label>
+                        <input
+                            type="number"
+                            id="personas"
+                            name="personas"
+                            min="1"
+                            step="1"
+                            required
+                            placeholder="Ej.: 3"
+                            inputmode="numeric"
+                            class="w-full rounded-xl border-2 border-[#5A8A6A] bg-[#0A1A10] px-4 py-3 text-white placeholder:text-white/50 outline-none focus:border-[#6CC74E] focus:ring-2 focus:ring-[#6CC74E]/30">
+                        <p class="text-sm text-white/70 mt-2">Ingresá al menos 1 persona.</p>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:bg-[#D99120] hover:scale-[1.02] transition-transform focus:outline-none focus:ring-2 ">
+                        Enviar reserva
+                    </button>
+
+                    <p id="mensaje" role="status" aria-live="polite" class="hidden rounded-xl border border-[#6CC74E] bg-[#1C3A28] p-4 text-center"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm">
+        <p>&copy; 2026 Pulmón Verde. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("formulario-reserva");
+        const campoPersonas = document.getElementById("personas");
+        const mensaje = document.getElementById("mensaje");
+
+        campoPersonas.addEventListener("input", () => {
+            campoPersonas.setCustomValidity("");
+
+            if (campoPersonas.value !== "") {
+                const cantidad = Number(campoPersonas.value);
+
+                if (!Number.isInteger(cantidad) || cantidad < 1) {
+                    campoPersonas.setCustomValidity("Ingresá un número entero de al menos 1 persona.");
+                }
+            }
+        });
+
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+
+            if (!formulario.checkValidity()) {
+                formulario.reportValidity();
+                return;
+            }
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const apellido = document.getElementById("apellido").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const personas = Number(campoPersonas.value);
+
+            if (!nombre || !apellido || !email || !Number.isInteger(personas) || personas < 1) {
+                mensaje.textContent = "Revisá los datos: todos los campos son obligatorios y la cantidad debe ser un entero mayor que cero.";
+                mensaje.classList.remove("hidden");
+                return;
+            }
+
+            mensaje.textContent = `¡Gracias, ${nombre}! Tu solicitud de visita para ${personas} ${personas === 1 ? "persona" : "personas"} fue validada correctamente. Recibirás un correo de confirmación en ${email}.`;
+            mensaje.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>
