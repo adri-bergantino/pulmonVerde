@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Thays | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#0A1A10] font-Outfit text-white">
+
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
+                <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="max-w-6xl mx-auto px-4 py-8">
+        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform"> ← Volver al inicio </a>
+
+        <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center mt-4">Parque Carlos Thays</h1>
+        <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Naturaleza, arte y el recuerdo del Italpark en pleno Recoleta</h2>
+
+        <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
+
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
+                <img id="foto-principal" src="Fotos/thays/panoramica.jpg" alt="Vista de las lomas verdes del Parque Thays con la ciudad de fondo" class="w-full h-64 md:h-96 object-cover rounded-2xl">
+
+                <div class="grid grid-cols-5 gap-2 mt-4">
+                    <img src="Fotos/thays/panoramica.jpg" alt="Vista del parque" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/thays/convenciones.jpg" alt="Centro de Convenciones Buenos Aires" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/thays/torso.jpg" alt="Estatua Torso Masculino de Botero" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/thays/estatua.jpg" alt="Monumento en el parque" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/thays/armenia.jpg" alt="Placa conmemorativa de Armenia" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                </div>
+            </div>
+
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
+                <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">La data del parque</h3>
+                <ul class="space-y-3">
+                    <li><b>Ubicación:</b> Av. Figueroa Alcorta y Av. Callao (Recoleta).</li>
+                    <li><b>Horarios:</b> Abierto todo el día, es espacio público.</li>
+                    <li><b>Acceso:</b> Libre y gratuito.</li>
+                    <li><b>Instalaciones:</b> Hay patio de juegos para los chicos, posta aeróbica y un canil enorme.</li>
+                    <li><b>Cómo llegar:</b> Estás a un paso de la línea H (Facultad de Derecho) y pasan un montón de colectivos por Libertador y Callao.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="max-w-3xl mx-auto text-center text-lg mt-12">
+            <p class="mb-4">Si caminás por Recoleta, es imposible no cruzarte con el Parque Thays. Inaugurado en 1998, este espacio verde ocupa un lugar súper nostálgico para muchos porteños: acá es donde funcionó durante décadas el mítico parque de diversiones Italpark. Hoy la onda es totalmente distinta. Sus lomadas gigantes de pasto son el lugar perfecto para tirar una lona, tomar mates el fin de semana o simplemente desconectar un rato del ruido de la ciudad.</p>
+            <p class="mb-4">Pero el parque no es solo pasto y árboles. Caminando por los senderos te vas a ir topando con obras de arte buenísimas (literal, funciona casi como un museo al aire libre) y vas a notar cómo el diseño paisajístico se integra re bien con la arquitectura moderna del Centro de Convenciones de Buenos Aires, que está semi-enterrado bajo el nivel del parque.</p>
+            <p>Si venís a pasar el día, acordate de las reglas de siempre: tirá la basura en los tachos, paseá a tu perro con correa y bozal (para soltarlo tenés el canil), y cuidemos entre todos los monumentos que hacen tan lindo a este lugar.</p>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">¿Qué vas a encontrar?</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/thays/torso.jpg" alt="Torso Masculino de Botero" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">El icónico Torso de Botero</h3>
+                    <p class="text-center mt-2">Es imposible que pase desapercibida. Esta tremenda escultura de bronce fue donada por Fernando Botero y es una parada obligada para la foto.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/thays/convenciones.jpg" alt="Centro de Convenciones" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Centro de Convenciones</h3>
+                    <p class="text-center mt-2">Parte de la arquitectura nueva del predio. Su diseño está pensado para camuflarse con el paisaje, metiéndose casi por debajo de las lomas.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/thays/estatua.jpg" alt="Monumento clásico" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Obras de arte escondidas</h3>
+                    <p class="text-center mt-2">A lo largo de los senderos te vas a ir cruzando con estatuas clásicas que le dan ese toque parisino típico de Buenos Aires.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/thays/armenia.jpg" alt="Placa 30 Aniversario Argentina y Armenia" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Rincón de la memoria</h3>
+                    <p class="text-center mt-2">Vas a encontrar un sector con árboles donados y una placa que conmemora los 30 años de relación diplomática entre Argentina y Armenia.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/thays/parque1.jpg" alt="Gente relajándose en el parque" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Un respiro en la ciudad</h3>
+                    <p class="text-center mt-2">Las farolas antiguas y el césped enorme lo hacen el spot ideal para juntarse con amigos, entrenar o tirarse a leer un libro al sol.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
+            <iframe
+                src="https://www.google.com/maps?q=-34.584144,-58.393433&hl=es&z=17&output=embed"
+                title="Mapa de ubicación del Parque Thays"
+                loading="lazy"
+                class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
+        </section>
+
+        <div class="text-center mt-10">
+            <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110">← Volver al inicio</a>
+        </div>
+    </main>
+
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
+        <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
+    </footer>
+
+    <script>
+        function cambiarFoto(miniatura) {
+            var fotoGrande = document.getElementById("foto-principal");
+            fotoGrande.src = miniatura.src;
+            fotoGrande.alt = miniatura.alt;
+        }
+    </script>
+</body>
+</html>
