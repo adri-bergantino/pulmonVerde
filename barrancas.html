@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Barrancas | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-[#0A1A10] font-Outfit text-white">
+
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
+                <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
+                <li><a href="chat.html" class="hover:text-[#6CC74E]">Asistente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="max-w-6xl mx-auto px-4 py-8">
+        <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold px-4 py-2 rounded-2xl hover:scale-105 transition-transform"> ← Volver al inicio </a>
+
+        <h1 class="font-Fraunces font-bold text-[#C4790A] text-4xl md:text-5xl text-center mt-4">Parque Barrancas de Belgrano</h1>
+        <h2 class="font-Fraunces font-bold text-white text-xl md:text-2xl text-center mt-3">Las antiguas orillas del río convertidas en jardín</h2>
+
+        <section class="grid lg:grid-cols-[2fr_1fr] gap-6 mt-10">
+
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
+                <img id="foto-principal" src="Fotos/barrancas/glorieta.jpg" alt="La glorieta en una tarde de lluvia" class="w-full h-64 md:h-96 object-cover rounded-2xl">
+
+                <div class="grid grid-cols-5 gap-2 mt-4">
+                    <img src="Fotos/barrancas/glorieta.jpg" alt="La glorieta en una tarde de lluvia" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/barrancas/biblioteca-reina-batata.jpg" alt="La entrada de la Biblioteca Reina Batata" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/barrancas/senderos-de-ladrillo.jpg" alt="Senderos de ladrillo entre el pasto" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/barrancas/mirador.jpg" alt="Mirador con barandas blancas y faroles" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                    <img src="Fotos/barrancas/lomas-de-cesped.jpg" alt="Las lomas verdes del parque" onclick="cambiarFoto(this)" class="w-full h-20 md:h-24 object-cover rounded-lg cursor-pointer hover:scale-105">
+                </div>
+            </div>
+
+            <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6">
+                <h3 class="font-Fraunces font-bold text-white text-2xl mb-4">Información general</h3>
+                <ul class="space-y-3">
+                    <li><b>Ubicación:</b> entre La Pampa, Virrey Vértiz, Echeverría y 11 de Septiembre, Belgrano, Ciudad de Buenos Aires.</li>
+                    <li><b>Horario general:</b> abierto todo el día.</li>
+                    <li><b>Acceso:</b> gratuito, es un espacio público.</li>
+                    <li><b>Biblioteca Reina Batata:</b> lunes a viernes de 10:00 a 17:00; sábados, domingos y feriados de 9:00 a 18:00.</li>
+                    <li><b>Cómo llegar:</b> tren Mitre, estación Belgrano C, a pocos metros del parque.</li>
+                    <li><b>Accesibilidad:</b> espacio público al aire libre en pendiente; los senderos son de ladrillo y algunos tramos tienen escalones.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="max-w-3xl mx-auto text-center text-lg mt-12">
+            <p class="mb-4">Hasta mediados del siglo XIX el Río de la Plata llegaba al pie de estas barrancas. El terraplén del Ferrocarril Mitre, construido en esa época, contuvo las aguas y permitió secar los terrenos. En 1892 el paisajista francés Carlos Thays diseñó el parque, que hoy ocupa tres manzanas elevadas y reúne más de 60 especies vegetales, como ombúes, palmeras, magnolias, robles y ceibos.</p>
+            <p class="mb-4">En la parte alta se encuentra la Glorieta Antonio Malvagni, construida en 1910 y nombrada en honor al director italiano que creó la Banda Municipal de Buenos Aires. Antes tocaban orquestas y hoy se baila tango y folclore los domingos. El parque también tiene esculturas del siglo XIX, entre ellas una réplica de la Estatua de la Libertad hecha por Frédéric Bartholdi, el mismo autor de la de Nueva York.</p>
+            <p>Recomendamos recorrerlo con calma, mirar los ladrillos de los senderos, que en muchos casos conservan el nombre del lugar donde se fabricaron, y quedarse un domingo para ver la milonga en la glorieta.</p>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Arquitectura y rincones</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/barrancas/glorieta.jpg" alt="La glorieta de las Barrancas" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">La Glorieta</h3>
+                    <p class="text-center mt-2">Está desde 1910. Los domingos se baila tango y folclore.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/barrancas/biblioteca-reina-batata.jpg" alt="La escalera de colores de la biblioteca" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Biblioteca Reina Batata</h3>
+                    <p class="text-center mt-2">Una biblioteca para chicos en pleno parque, con un espacio para bebés.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/barrancas/senderos-de-ladrillo.jpg" alt="Camino de ladrillo con un busto al fondo" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Senderos de ladrillo</h3>
+                    <p class="text-center mt-2">Los clásicos ladrillos que se mantienen hasta el día de hoy.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/barrancas/mirador.jpg" alt="Barandas blancas bajo un árbol enorme" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Balaustradas y faroles</h3>
+                    <p class="text-center mt-2">Barandas blancas, faroles dorados y árboles gigantes.</p>
+                </div>
+
+                <div class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+                    <img src="Fotos/barrancas/lomas-de-cesped.jpg" alt="Pasto y palmeras con edificios atrás" class="w-full h-48 object-cover rounded-2xl">
+                    <h3 class="font-Fraunces font-bold text-[#C4790A] text-xl text-center mt-3">Las barrancas</h3>
+                    <p class="text-center mt-2">Antes acá llegaba el río. Hoy es ideal para tirarse al pasto y tomar mate.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="font-Fraunces font-bold text-white text-2xl mb-6">Dónde queda</h2>
+            <iframe
+                src="https://www.google.com/maps?q=Barrancas+de+Belgrano,+Belgrano,+Buenos+Aires&hl=es&output=embed"
+                title="Mapa de ubicación del Parque Barrancas de Belgrano"
+                loading="lazy"
+                class="w-full h-96 rounded-2xl border-2 border-[#5A8A6A]"></iframe>
+        </section>
+
+        <div class="text-center mt-10">
+            <a href="index.html" class="inline-block bg-[#C4790A] text-black font-bold text-lg px-6 py-3 rounded-2xl hover:scale-110"> ← Volver al inicio</a>
+        </div>
+    </main>
+
+    <footer class="bg-[#1C3A28] text-white p-4 text-center text-sm font-bold">
+        <p>&copy; 2026 Pulmón Verde. Derechos reservados.</p>
+    </footer>
+
+    <script>
+        function cambiarFoto(miniatura) {
+            var fotoGrande = document.getElementById("foto-principal");
+            fotoGrande.src = miniatura.src;
+            fotoGrande.alt = miniatura.alt;
+        }
+    </script>
+</body>
+</html>
