@@ -1,0 +1,76 @@
+{
+  "bienvenida": "¡Hola! Soy Verde, el asistente de Pulmón Verde. Preguntame sobre parques, horarios, reservas, cómo llegar o qué actividades podés hacer.",
+  "respuestas": [
+    {
+      "id": "parques",
+      "palabras": ["parques", "parque", "espacios", "lugares", "visitar", "ver"],
+      "respuesta": "Podés conocer el Parque Thays, el Ecoparque, el Parque Centenario y el Parque Lezama. En Inicio encontrás el recorrido completo y una tarjeta con más información sobre cada uno."
+    },
+    {
+      "id": "horarios",
+      "palabras": ["horario", "horarios", "hora", "abierto", "abren", "cierran", "cuándo"],
+      "respuesta": "Los horarios pueden variar según el parque, la temporada y el clima. En cada página de parque se publica el horario general disponible; consultalo antes de salir."
+    },
+    {
+      "id": "reserva",
+      "palabras": ["reserva", "reservar", "visita", "turno", "formulario", "inscribirme"],
+      "respuesta": "Podés realizar una reserva desde la sección Reservar. Elegís el parque, la experiencia, la cantidad de personas y revisás el resumen antes de confirmar."
+    },
+    {
+      "id": "transporte",
+      "palabras": ["cómo llegar", "como llegar", "transporte", "subte", "colectivo", "tren", "dirección", "direccion", "ubicación", "ubicacion", "gps"],
+      "respuesta": "La ubicación y las opciones de transporte se indican en la información general de cada parque. Como referencia, el Ecoparque está en Palermo y se puede llegar caminando desde Plaza Italia o usando el subte D."
+    },
+    {
+      "id": "ecoparque",
+      "palabras": ["ecoparque", "palermo", "animales", "fauna", "jirafa", "conservación", "conservacion"],
+      "respuesta": "El Ecoparque está en Palermo, en Av. General Las Heras 4267. Podés recorrer senderos, conocer fauna y participar de propuestas educativas; la entrada es gratuita para residentes de CABA, sujeta a las condiciones vigentes."
+    },
+    {
+      "id": "thays",
+      "palabras": ["thays", "recoleta", "botero", "escultura"],
+      "respuesta": "El Parque Thays se encuentra en Recoleta, cerca de Avenida Del Libertador. Es conocido por su diseño francés, monumentos y esculturas, entre ellas obras vinculadas a artistas reconocidos."
+    },
+    {
+      "id": "centenario",
+      "palabras": ["centenario", "caballito", "lago", "fuente", "feria"],
+      "respuesta": "El Parque Centenario está en Caballito. Tiene lago, fuentes, senderos, ferias, espacios deportivos y actividades culturales en el entorno del anfiteatro y el Museo Argentino de Ciencias Naturales."
+    },
+    {
+      "id": "actividades",
+      "palabras": ["actividad", "actividades", "hacer", "paseo", "picnic", "taller", "sendero", "familia", "niños", "ninos"],
+      "respuesta": "Podés pasear, hacer picnic, recorrer senderos, observar naturaleza, asistir a ferias o sumar un taller. Cada experiencia tiene distintas recomendaciones y duración."
+    },
+    {
+      "id": "duracion",
+      "palabras": ["cuánto", "cuanto", "duración", "duracion", "tiempo", "horas", "dia"],
+      "respuesta": "Se recomienda dedicar entre una hora y media y tres horas a un parque chico o mediano. Para recorrer los cuatro parques conviene repartir el paseo en dos o más días."
+    },
+    {
+      "id": "recomendaciones",
+      "palabras": ["llevar", "calzado", "agua", "sol", "protección", "proteccion", "clima", "lluvia", "recomendación", "recomendacion", "consejo"],
+      "respuesta": "Usá calzado cómodo, llevá agua y protección solar, revisá el pronóstico y consultá las condiciones de apertura antes de salir. Si llueve, algunas actividades al aire libre pueden verse afectadas."
+    },
+    {
+      "id": "contacto",
+      "palabras": ["contacto", "correo", "mail", "email", "consultar", "mensaje", "ayuda"],
+      "respuesta": "Podés usar la página de Contacto para enviar una consulta mediante el formulario disponible en el sitio."
+    },
+    {
+      "id": "precio",
+      "palabras": ["precio", "precios", "costo", "cuánto sale", "cuanto sale", "gratis", "pago"],
+      "respuesta": "Muchos de los recorridos se pueden hacer sin costo. Las experiencias de reserva indican su valor durante el proceso."
+    },
+    {
+      "id": "saludo",
+      "palabras": ["hola", "buenas", "buenos días", "buenos dias", "buenas tardes", "buenas noches", "qué tal", "que tal"],
+      "respuesta": "¡Hola! ¿Qué te gustaría saber: parques, horarios, cómo llegar, actividades o reservas?"
+    },
+    {
+      "id": "gracias",
+      "palabras": ["gracias", "muchas gracias", "genial", "excelente"],
+      "respuesta": "¡De nada! Si necesitás otra recomendación sobre los parques, puedo ayudarte."
+    }
+  ],
+  "default": "No encontré una respuesta exacta. Probá preguntar por \"parques\", \"horarios\", \"reservas\", \"transporte\", \"actividades\" o por el nombre de un parque como Ecoparque o Thays."
+}

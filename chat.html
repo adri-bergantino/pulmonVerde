@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultá al asistente de Pulmón Verde sobre parques, horarios, reservas y actividades.">
+    <title>Consultá a Verde | Pulmón Verde</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="min-h-screen bg-[#0A1A10] font-Outfit text-white">
+    <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-[100] focus:bg-[#C4790A] focus:text-black focus:font-bold focus:px-4 focus:py-2 focus:rounded-xl">Saltar al contenido principal</a>
+
+    <header class="sticky top-0 z-50 bg-[#1C3A28] flex flex-wrap items-center justify-between gap-y-2 px-4 font-Outfit text-white">
+        <a href="index.html" aria-label="Pulmón Verde, ir al inicio">
+            <img src="Fotos/logo.png" alt="Logo de Pulmón Verde" class="h-20">
+        </a>
+        <nav class="mx-auto" aria-label="Navegación principal">
+            <ul class="flex flex-wrap gap-x-8 gap-y-2 font-bold">
+                <li><a href="index.html" class="hover:text-[#6CC74E]">Inicio</a></li>
+                <li><a href="index.html#parques" class="hover:text-[#6CC74E]">Parques</a></li>
+                <li><a href="index.html#recorrido" class="hover:text-[#6CC74E]">Recorrido</a></li>
+                <li><a href="index.html#experiencias" class="hover:text-[#6CC74E]">Experiencias</a></li>
+                <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
+                <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
+                <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
+                <li><a href="chat.html" aria-current="page" class="text-[#6CC74E] underline underline-offset-4">Asistente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" class="mx-auto max-w-5xl px-4 py-8">
+        <a href="index.html" class="inline-block rounded-2xl bg-[#C4790A] px-4 py-2 font-bold text-black transition-transform hover:scale-105">← Volver al inicio</a>
+
+        <section class="mt-6" aria-labelledby="titulo-chat">
+            <div class="mb-6 text-center">
+                <p class="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-[#6CC74E]">Asistente virtual</p>
+                <h1 id="titulo-chat" class="font-Fraunces text-4xl font-bold text-[#C4790A] md:text-5xl">Consultá a Verde</h1>
+                <p class="mx-auto mt-3 max-w-2xl text-lg text-white/80">Hacé una consulta sobre los parques y recibí una respuesta rápida basada en información del sitio.</p>
+            </div>
+
+            <div class="overflow-hidden rounded-3xl border-2 border-[#5A8A6A] bg-[#0F2118] shadow-2xl">
+                <div class="flex items-center justify-between border-b border-[#5A8A6A] px-5 py-4">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-11 w-11 items-center justify-center rounded-full bg-[#6CC74E] text-xl" aria-hidden="true">🌿</div>
+                        <div>
+                            <h2 class="font-Fraunces text-xl font-bold">Verde</h2>
+                            <p class="text-sm text-white/70">Asistente de Pulmón Verde</p>
+                        </div>
+                    </div>
+                    <p id="chat-estado" class="rounded-full border border-[#5A8A6A] px-3 py-1 text-xs font-bold text-[#6CC74E] opacity-0 transition-opacity" aria-live="polite"></p>
+                </div>
+
+                <div id="chat-mensajes" class="flex h-[400px] flex-col gap-3 overflow-y-auto p-4 sm:h-[480px] sm:p-6" role="log" aria-live="polite" aria-label="Conversación"></div>
+
+                <div class="border-t border-[#5A8A6A] px-4 py-4">
+                    <div class="mb-3 flex flex-wrap gap-2" aria-label="Consultas sugeridas">
+                        <button type="button" data-pregunta="¿Cuáles son los parques?" class="rounded-full border border-[#5A8A6A] px-3 py-2 text-sm hover:border-[#6CC74E] hover:text-[#6CC74E]">Parques</button>
+                        <button type="button" data-pregunta="¿Cómo llegar al Ecoparque?" class="rounded-full border border-[#5A8A6A] px-3 py-2 text-sm hover:border-[#6CC74E] hover:text-[#6CC74E]">Cómo llegar</button>
+                        <button type="button" data-pregunta="¿Qué actividades puedo hacer?" class="rounded-full border border-[#5A8A6A] px-3 py-2 text-sm hover:border-[#6CC74E] hover:text-[#6CC74E]">Actividades</button>
+                        <button type="button" data-pregunta="Quiero hacer una reserva" class="rounded-full border border-[#5A8A6A] px-3 py-2 text-sm hover:border-[#6CC74E] hover:text-[#6CC74E]">Reservar</button>
+                    </div>
+
+                    <form id="chat-formulario" class="flex gap-3" role="search">
+                        <label for="chat-entrada" class="sr-only">Escribí tu consulta</label>
+                        <input id="chat-entrada" type="text" autocomplete="off" maxlength="180" placeholder="Escribí tu pregunta..." class="campo min-w-0 flex-1" required>
+                        <button type="submit" class="rounded-xl bg-[#C4790A] px-5 font-bold text-black transition-transform hover:scale-[1.03] sm:px-7">
+                            <span aria-hidden="true">➤</span>
+                            <span class="sr-only">Enviar consulta</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#1C3A28] p-4 text-center text-sm">
+        <p>&copy; 2026 Pulmón Verde. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

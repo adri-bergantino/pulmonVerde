@@ -23,6 +23,7 @@
                 <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
                 <li><a href="formulario.html" aria-current="page" class="text-[#6CC74E] underline underline-offset-4">Reservar</a></li>
                 <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
+                <li><a href="chat.html" class="hover:text-[#6CC74E]">Asistente</a></li>
             </ul>
         </nav>
     </header>
@@ -36,13 +37,11 @@
                 <p class="text-lg sm:text-xl mt-5 leading-relaxed">Los parques son de acceso libre, pero podés sumar una experiencia con anticipación. Elegí el parque, la experiencia y la cantidad: calculamos el total en dólares y en pesos.</p>
             </div>
 
-            <!-- Aviso permanente -->
             <p class="flex gap-3 rounded-xl border-2 border-[#C4790A] bg-[#1C3A28] p-4">
                 <span aria-hidden="true">ℹ</span>
                 <span><strong>Reserva de demostración.</strong> Este sitio es un trabajo académico: no se procesan pagos, no se piden datos bancarios y los precios son de ejemplo.</span>
             </p>
 
-            <!-- PASO 1: FORMULARIO -->
             <div id="reserva-paso-formulario" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
                 <h2 id="reserva-titulo-formulario" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl mb-2">Armá tu reserva</h2>
                 <p class="text-white/80 mb-6">Todos los campos son obligatorios, salvo los adicionales.</p>
@@ -51,7 +50,6 @@
 
                 <form id="formulario-reserva" novalidate class="space-y-8">
 
-                    <!-- Tus datos -->
                     <fieldset class="grupo-campos">
                         <legend class="grupo-titulo">Tus datos</legend>
                         <div class="space-y-5 mt-2">
@@ -77,7 +75,6 @@
                         </div>
                     </fieldset>
 
-                    <!-- Tu experiencia -->
                     <fieldset class="grupo-campos">
                         <legend class="grupo-titulo">Tu experiencia</legend>
                         <div class="space-y-6 mt-2">
@@ -94,7 +91,6 @@
                                 <p id="parque-error" class="campo-error" hidden></p>
                             </div>
 
-                            <!-- Fuente de datos de precios: atributos data-* (js/reserva.js los lee) -->
                             <fieldset id="experiencia" aria-describedby="experiencia-error" class="grupo-campos">
                                 <legend class="grupo-titulo">Experiencia</legend>
                                 <div class="grid gap-4 md:grid-cols-3 mt-2">
@@ -164,7 +160,7 @@
                         </div>
                     </fieldset>
 
-                    <!-- Total en vivo -->
+  
                     <section aria-labelledby="titulo-total" class="rounded-2xl border-2 border-[#6CC74E] bg-[#1C3A28] p-5">
                         <h3 id="titulo-total" class="font-Fraunces font-bold text-xl">Tu total</h3>
                         <p id="total-vacio" class="mt-3">Elegí una experiencia e ingresá la cantidad para ver el total.</p>
@@ -180,7 +176,6 @@
                 </form>
             </div>
 
-            <!-- PASO 2: RESUMEN ANTES DE CONFIRMAR -->
             <div id="reserva-paso-resumen" hidden class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-5 sm:p-8">
                 <h2 id="reserva-titulo-resumen" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl">Revisá tu reserva</h2>
                 <p class="text-white/80 mt-2">Todavía no está confirmada. Si algo no es correcto, volvé a editar.</p>
@@ -212,7 +207,6 @@
                 </div>
             </div>
 
-            <!-- PASO 3: CONFIRMACIÓN -->
             <div id="reserva-paso-confirmacion" hidden class="bg-[#0F2118] border-2 border-[#6CC74E] rounded-2xl p-5 sm:p-8">
                 <h2 id="reserva-titulo-confirmacion" tabindex="-1" class="font-Fraunces font-bold text-white text-2xl sm:text-3xl">✔ Reserva registrada (simulación)</h2>
                 <p id="confirmacion-texto" class="mt-4 text-lg"></p>

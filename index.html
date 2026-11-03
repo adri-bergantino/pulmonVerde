@@ -25,13 +25,13 @@
                 <li><a href="index.html#sobre-nosotros" class="hover:text-[#6CC74E]">Sobre nosotros</a></li>
                 <li><a href="formulario.html" class="hover:text-[#6CC74E]">Reservar</a></li>
                 <li><a href="contacto.html" class="hover:text-[#6CC74E]">Contacto</a></li>
+                <li><a href="chat.html" class="hover:text-[#6CC74E]">Asistente</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="contenido">
 
-        <!-- PRESENTACIÓN -->
         <section aria-labelledby="titulo-principal" class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] gap-6 lg:gap-8 w-full p-4 sm:p-6 lg:p-8">
 
             <div class="min-w-0 flex flex-col justify-center">
@@ -53,31 +53,29 @@
 
         </section>
 
-        <!-- PROPUESTA DE VALOR -->
         <section aria-labelledby="titulo-propuesta" class="max-w-6xl mx-auto px-4 py-12">
             <h2 id="titulo-propuesta" class="font-Fraunces font-bold text-white text-3xl sm:text-4xl text-center">Una ciudad que se recorre a paso lento</h2>
             <p class="text-lg text-center max-w-3xl mx-auto mt-4">Pulmón Verde reúne cuatro parques de Buenos Aires en un solo recorrido. Te mostramos qué ver, cómo llegar y cuánto tiempo dedicarle a cada uno, para que armes tu paseo sin vueltas.</p>
 
             <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
                 <li class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6 text-center">
-                    <p class="text-4xl" aria-hidden="true">🌳</p>
+                    <img src="Fotos/ecoparque/Eco1.jpeg" alt="Entrada y lago del Ecoparque" class="block mx-auto w-4/5 h-48 object-cover rounded-2xl border-2 border-[#5A8A6A]">
                     <h3 class="font-Fraunces font-bold text-[#C4790A] text-2xl mt-3">Naturaleza</h3>
                     <p class="mt-2">Lagos, senderos, árboles centenarios y fauna a minutos del microcentro y los barrios.</p>
                 </li>
                 <li class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6 text-center">
-                    <p class="text-4xl" aria-hidden="true">🏛️</p>
+                    <img src="Fotos/thays/estatua.jpg" alt="Monumento en el parque" class="block mx-auto w-4/5 h-48 object-cover rounded-2xl border-2 border-[#5A8A6A]">
                     <h3 class="font-Fraunces font-bold text-[#C4790A] text-2xl mt-3">Historia</h3>
                     <p class="mt-2">Jardines históricos, monumentos y edificios que cuentan cómo creció la ciudad.</p>
                 </li>
                 <li class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-6 text-center">
-                    <p class="text-4xl" aria-hidden="true">🎨</p>
+                    <img src="Fotos/centenario/feria-del-parque.jpg" alt="Feria dentro del parque con puestos de techos de colores" class="w-full h-48 object-cover rounded-2xl">
                     <h3 class="font-Fraunces font-bold text-[#C4790A] text-2xl mt-3">Cultura</h3>
                     <p class="mt-2">Ferias, museos, anfiteatros y actividades al aire libre para ir solo, en pareja o en familia.</p>
                 </li>
             </ul>
         </section>
 
-        <!-- PARQUES -->
         <section id="parques" aria-labelledby="titulo-parques" class="border-2 p-4 border-[#5A8A6A] mx-4 mb-6 rounded-lg scroll-mt-28">
 
             <h2 id="titulo-parques" class="font-Fraunces font-bold text-white text-4xl text-center mb-4">Conocé los Parques</h2>
@@ -115,7 +113,6 @@
             </ul>
         </section>
 
-        <!-- MAPA DEL RECORRIDO -->
         <section id="recorrido" aria-labelledby="titulo-recorrido" class="max-w-6xl mx-auto px-4 py-12 scroll-mt-28">
             <h2 id="titulo-recorrido" class="font-Fraunces font-bold text-white text-3xl sm:text-4xl text-center">Mapa del recorrido</h2>
             <p class="text-lg text-center max-w-3xl mx-auto mt-4">Un orden sugerido para recorrer los cuatro parques de sur a norte. Tocá un marcador o un parque de la lista para verlo en el mapa. La línea une los parques en orden y no marca calles.</p>
@@ -128,7 +125,6 @@
                     <p class="text-sm text-white/80 mt-2">Mapa: © colaboradores de <a href="https://www.openstreetmap.org/copyright" class="underline">OpenStreetMap</a>.</p>
                 </div>
 
-                <!-- Fuente única de datos del mapa: js/mapa.js lee estos atributos data-* -->
                 <ol id="lista-recorrido" class="space-y-4">
                     <li data-orden="1" data-lat="-34.6064" data-lng="-58.4358" data-nombre="Parque Centenario" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
                         <p class="font-Fraunces font-bold text-xl"><span class="text-[#C4790A]">1.</span> Parque Centenario</p>
@@ -138,7 +134,7 @@
                             <a href="centenario.html" aria-label="Ver la página del Parque Centenario" class="bg-[#C4790A] text-black font-bold px-3 py-1 rounded-xl hover:scale-105 transition-transform">Ver página</a>
                         </div>
                     </li>
-                    <li data-orden="2" data-lat="-34.5878" data-lng="-58.3908" data-nombre="Parque Thays" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
+                    <li data-orden="2" data-lat="-34.5846" data-lng="-58.3887" data-nombre="Parque Thays" class="bg-[#0F2118] border-2 border-[#5A8A6A] rounded-2xl p-4">
                         <p class="font-Fraunces font-bold text-xl"><span class="text-[#C4790A]">2.</span> Parque Thays</p>
                         <p class="text-white/80">Recoleta</p>
                         <div class="flex flex-wrap gap-3 mt-3">
@@ -166,7 +162,6 @@
             </div>
         </section>
 
-        <!-- EXPERIENCIAS Y PROMOCIONES -->
         <section id="experiencias" aria-labelledby="titulo-experiencias" class="max-w-6xl mx-auto px-4 py-12 scroll-mt-28">
             <h2 id="titulo-experiencias" class="font-Fraunces font-bold text-white text-3xl sm:text-4xl text-center">Experiencias para vivir los parques</h2>
             <p class="text-lg text-center max-w-3xl mx-auto mt-4">Además de pasear por tu cuenta, podés solicitar una experiencia y organizar tu visita con anticipación.</p>
@@ -196,7 +191,6 @@
             </div>
         </section>
 
-        <!-- SOBRE NOSOTROS -->
         <section id="sobre-nosotros" aria-labelledby="titulo-nosotros" class="max-w-3xl mx-auto px-4 py-12 text-center scroll-mt-28">
             <h2 id="titulo-nosotros" class="font-Fraunces font-bold text-white text-3xl sm:text-4xl">Sobre nosotros</h2>
             <p class="text-lg mt-4">Pulmón Verde es un proyecto del Grupo 11 de la materia Diseño y Desarrollo Web. Nació para mostrar los espacios verdes más emblemáticos de Buenos Aires y facilitar su visita con información clara y práctica.</p>
